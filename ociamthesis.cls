@@ -21,7 +21,7 @@
 \raggedbottom
 
 %define the default submitted text
-\newcommand{\submittedtext}{{Applied Bachelor Program of Informatics Engineering}}
+\newcommand{\submittedtext}{{Informatics Research Center}}
 
 %
 % DECLARATIONS
@@ -65,7 +65,7 @@
 {
 % Latest Logo, Square version (the default!)
 % you need an oxlogo.eps or oxlogo.pdf file as appropriate
-\def\logo{{\includegraphics[width=32mm]{logo-poltekpos}}}
+\def\logo{{\includegraphics[width=32mm]{irc}}}
 }{}
 
 %
@@ -106,7 +106,7 @@
 {\large \vspace*{1ex}
     {{\@college} \par}
 \vspace*{1ex}
-    {Program Studi D4 Teknik Informatika \par}
+    {Scopus ID : 57200415037 \par}
 \vspace*{25mm}
     {{\submittedtext} \par}
 \vspace*{1ex}
