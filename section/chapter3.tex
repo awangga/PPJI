@@ -4,49 +4,20 @@ Dalam bab ini dituliskan tata cara penulisan jurnal dalam format latex. Latex me
 
 
 \section{Standar Format Latex}
-Beberapa Aturan yang harus dipatuhi :
+Format latex yang dipakai pada buku ini adalah format khusus yang sudah dibagi dengan folder standar dan file standar agar mempermudah dalam pengerjaan. Beberapa Aturan yang ada di dalam format ini antara lain :
 \begin{enumerate}
 
     \item file disimpan dalam format ber ekstensi .tex per chapter masing2 di folder section
 
     \item gambar disimpan dalam folder figures dengan namagambar
 
-    \item referensi dari google scholar,scholar.google.com
+	\item referensi BibTex disimpan di file bernama references.bib
+	
+\end{enumerate}
 
-    \item Setiap referensi yang diambil, maka tambahkan dan tuliskan ke dalam file bernama references.bib yang berisi kumpulan bibTex dari referensi. Gunakan standar pengutipan yang baik dan benar
+\section{Pengaturan Bab dan Sub Bab}
 
-    \item Gambar disebutkan di dalam artikel dengan format sesuai labelnya yaitu \\ \verb|\ref{labelgambar}|. \\ Gambar diselipkan dengan menambahkan blok sintaks :
-    \begin{verbatim}
-    \begin{figure}[ht]
-    \centerline{\includegraphics[width=1\textwidth]
-    {figures/namagambar.JPG}}
-    \caption{penjelasan keterangan gambar.}
-    \label{labelgambar}
-    \end{figure}
-    
-    Contoh :
-    Pada gambar \ref{labelgambar} dijelaskan bahwa 
-    sistem operasi memiliki 3 versi.
-    \end{verbatim}
-
-    \item Referensi disebutkan dengan menyebutkan nama di dalam file bibtex No.4. \\
-    Contoh, Jika Bibtex sudah diinputkan kedalam reference.bib seperti ini :
-    \begin{verbatim}
-    @inproceedings{ganapathi2006windows,
-      title={Windows XP Kernel Crash Analysis.},
-      author={Ganapathi, Archana and Ganapathi, 
-      Viji and Patterson, David A},
-      booktitle={LISA},
-      volume={6},
-      pages={49--159},
-      year={2006}
-    }
-    \end{verbatim}
-    Maka penulisan kalimat di jurnal : \\
-    Dalam sebuah artikel dari Ganapathi yang 
-    menyebutkan bahwa komputasi adalah keniscayan \verb|\cite{ganapathi2006windows}|.
-    
-    \item Penyebutan subbab dan subsubbab diatur dengan cara : \\
+Penyebutan subbab dan subsubbab diatur dengan cara : \\
     judul sub bab : \\ 
     \verb|\section{nama sub bab}| \\
     judul sub sub bab ditulis dengan :\\ 
@@ -64,9 +35,51 @@ pembuat peta sebelumnya
 \subsection{Ptolemy's}
 Ptolemy's diduga membuat peta pada abad ke 2
 \end{verbatim}
-    
-    \item untuk list dan nomor gunakan enumerate atau itemize contoh :
+
+
+\section{Melakukan Sitasi}
+
+Cara yang paling cepat dan mudah untuk membuat daftar pustaka adalah dengan menggunakan Google Schoolar. Referensi yang sudah kita baca, kita masukkan ke judulnya ke pencarian dari google scholar,scholar.google.com. Kemudian, setiap referensi yang diambil, maka tambahkan dan tuliskan ke dalam file bernama references.bib yang berisi kumpulan bibTex dari referensi. Gunakan standar pengutipan yang baik dan benar,dan hindari plagiasi. Cara menggunakan dan mengambil bibtex sudah dijelaskan pada BAB I. 
+
+Referensi disebutkan dengan menyebutkan nama di dalam bibtex setelah tanda kurung kurawal buka dan sebelum tanda koma. Contoh, Jika Bibtex sudah diinputkan kedalam reference.bib seperti ini :
+\begin{verbatim}
+@inproceedings{ganapathi2006windows,
+  title={Windows XP Kernel Crash Analysis.},
+  author={Ganapathi, Archana and Ganapathi, 
+  Viji and Patterson, David A},
+  booktitle={LISA},
+  volume={6},
+  pages={49--159},
+  year={2006}
+}
+\end{verbatim}
+Maka penulisan kalimat di jurnal : \\
+Dalam sebuah artikel dari Ganapathi yang 
+menyebutkan bahwa komputasi adalah keniscayan \verb|\cite{ganapathi2006windows}|.
+
+
+\section{Memasukkan Gambar}
+
+Pastikan gambar sudah diberi label seperti skrip di bawah ini dengan tag label \verb|\label{labelgambar}| . Gambar disebutkan di dalam artikel dengan format sesuai labelnya yaitu \verb|\ref{labelgambar}|. Gambar diselipkan dengan menambahkan blok sintaks :
     \begin{verbatim}
+    \begin{figure}[ht]
+    \centerline{\includegraphics[width=1\textwidth]
+    {figures/namagambar.JPG}}
+    \caption{penjelasan keterangan gambar.}
+    \label{labelgambar}
+    \end{figure}
+    
+   	Contoh dalam narasi di dalam paragraf yaitu :
+    Pada gambar \ref{labelgambar} dijelaskan bahwa 
+    sistem operasi memiliki 3 versi.
+    \end{verbatim}
+
+Dan jangan lupa, dilarang keras menggunakan kalimat penyebutan relatif terhadap gambar. Contoh : gambar di bawah ini. Tapi gunakan kalimat penyebutan referensi nomor gambarnya. Contoh : Bisa dilihat di Gambar 1.
+
+\section{Urutan Nomor dan Poin}
+
+Penggunaan nomor urut atau yang sering kita dengar dengan istilah numbering. Serta penggunaan poin atau yang sering disebut sebagai bullet adalah sebagai berikut. Untuk nomor gunakan tag enumerate. Sedangkan untuk bullet atau poin menggunakan tag itemize. Sebagai contoh :
+\begin{verbatim}
 berikut nama anggota kelompok
 \begin{enumerate}
 \item darso
@@ -101,25 +114,43 @@ This is the first item in the itemized list.
 This is the first item in the itemized list.
 This is the first item in the itemized list.
 \end{itemize}
-    \end{verbatim}
+\end{verbatim}
     
-    \item spesial karakter menggunakan tanda `\verb|\|' didepannya contoh :
-    \begin{verbatim}
+\section{Karakter Khusus}
+
+spesial karakter menggunakan tanda `\verb|\|' didepannya contoh :
+\begin{verbatim}
 \& 
 \% 
 \$ 
 \#  
 \{ \}
 \_
+\end{verbatim}
+
+Tanda pentik menggunakan petik pembuka dengan menggunakan petik diatas angka 1. 
+Dan petik penutup dengan menggunakan tanda petik satu biasa.
+\begin{verbatim}
 \"dalam petik\"
 `dalam petik'
-jika spesial karakter menjadi banyak atau satu baris gunakan verb
+\end{verbatim} 
+Apostrop atau tanda petik satu pada penggunaan kata bahasa inggris sering digunakan. Tanpa petik satu sudah bisa terbaca dan dipakai sehingga tidak perlu ada karakter khusus. Apabila ada error pastikan anda mengetik tanpa petik satu yang benar bukan hasil copas dari file lain. Sehingga apabila diimplementasikan menjadi :
+\begin{verbatim}
+`It's a nice day!'
+\end{verbatim} 
+Hasilnya akan menjadi : `It's a nice day!'
+
+Jika spesial karakter menjadi banyak atau satu baris gunakan verb
 contoh :
+\begin{verbatim}
 \verb|%$'%&$&'%'%'%&'%|
-    \end{verbatim}
-    
-    \item untuk tabel gunakan table , dan jangan lupa tabel di referensikan pada kalimat berdasarkan labelnya. contoh:
-    \begin{verbatim}
+\end{verbatim}
+
+\section{Penggunaan Tabel}
+
+untuk tabel gunakan table , dan jangan lupa tabel di referensikan pada kalimat berdasarkan labelnya. 
+contoh:
+\begin{verbatim}
 ini merupakan contoh tabel \ref{table:contoh} ukuran kecil.
 \begin{table}[h]
 \caption{Small Table}
@@ -134,9 +165,11 @@ C&D&E\\
 \label{table:contoh}
 \end{table}
     \end{verbatim}
-    
-    \item untuk rumus gunakan tag equation dan di referensikan pada kalimat dengan tag ref sesuai labelnya contoh:
-    \begin{verbatim}
+
+\section{Penggunaan Rumus}
+
+untuk rumus gunakan tag equation dan di referensikan pada kalimat dengan tag ref sesuai labelnya. contoh:
+\begin{verbatim}
 Luas permukaan dijelaskan pada rumus \ref{eq:1}.Volume dijelaskan 
 pada rumus \ref{eq:2}.
 $L$ merupakan luas, $\pi$ adalah 3,14.
@@ -146,18 +179,75 @@ $L$ merupakan luas, $\pi$ adalah 3,14.
  \begin{equation}\label{eq:2}
      V = \frac{4}{3}\pi r^3
 \end{equation}
-    \end{verbatim}
-    
-    \item untuk kode program menggunakan verbatim
+\end{verbatim}
+Hasil dari skrip diatas menjadi :
+
+Luas permukaan dijelaskan pada rumus \ref{eq:1}.Volume dijelaskan 
+pada rumus \ref{eq:2}.
+$L$ merupakan luas, $\pi$ adalah 3,14.
+\begin{equation}\label{eq:1}
+     L = 4 \pi r^2 \,
+\end{equation}
+ \begin{equation}\label{eq:2}
+     V = \frac{4}{3}\pi r^3
+\end{equation}
+ 
+Contoh selanjutnya adalah, apabila terdapat simbol-simbol matematika maka kita bisa melihat contoh rumus berikut :
+
     \begin{verbatim}
+		Rumus \ref{eq:3} adalah contoh penggunaan rumus mean atau rata-rata .
+		Sedangkan rumus \ref{eq:4} adalah Median untuk ganjil  
+		dan untuk genap di rumus \ref{eq:5}.
+		Dan modus \ref{eq:6}
+		\begin{equation}\label{eq:3}
+		 \Bar{x} = \frac{X_1+X_2+X_3+...+X_n}{n}    
+		\end{equation}
+		\begin{equation}\label{eq:4}
+		    \Bar{x} = \frac{n+1}{2}
+		\end{equation}
+		\begin{equation}\label{eq:5}
+		    \Bar{x} = \frac{1}{2} [\frac{n}{2}+\langle\frac{n}{2}+1\rangle]
+		\end{equation}
+		\begin{equation}\label{eq:6}
+		    L + i [\frac{d_1}{d_1d_2}]
+		\end{equation}
+    \end{verbatim}
+
+Hasil dari script diatas adalah :
+
+Rumus \ref{eq:3} adalah contoh penggunaan rumus mean atau rata-rata .
+Sedangkan rumus \ref{eq:4} adalah Median untuk ganjil  
+dan untuk genap di rumus \ref{eq:5}.
+Dan modus \ref{eq:6}
+\begin{equation}\label{eq:3}
+ \Bar{x} = \frac{X_1+X_2+X_3+...+X_n}{n}    
+\end{equation}
+\begin{equation}\label{eq:4}
+    \Bar{x} = \frac{n+1}{2}
+\end{equation}
+\begin{equation}\label{eq:5}
+    \Bar{x} = \frac{1}{2} [\frac{n}{2}+\langle\frac{n}{2}+1\rangle]
+\end{equation}
+\begin{equation}\label{eq:6}
+    L + i [\frac{d_1}{d_1d_2}]
+\end{equation}
+
+Daftar lengkap simbol matematis bisa dilihat di lampiran buku ini.
+
+
+
+\section{Kode Program}
+untuk kode program menggunakan verbatim
+\begin{verbatim}
 \ begin{verbatim}
 a = "anu"
 b = "itu"
 c = a + b
 print(c) 
 \ end{verbatim}
-    \end{verbatim}
-\end{enumerate}
+\end{verbatim}
+
+
 
 
 
