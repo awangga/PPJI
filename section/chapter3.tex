@@ -158,9 +158,9 @@ contoh :
 untuk tabel gunakan table , dan jangan lupa tabel di referensikan pada kalimat berdasarkan labelnya. 
 contoh:
 \begin{verbatim}
-ini merupakan contoh tabel \ref{table:contoh} ukuran kecil.
+ini merupakan contoh tabel \ref{table:contoh}.
 \begin{table}[h]
-\caption{Small Table}
+\caption{Tabel Contoh}
 \centering
 \begin{tabular}{ccc}
 \hline
@@ -175,9 +175,9 @@ C&D&E\\
 
 Maka hasilnya menjadi :
 
-ini merupakan contoh tabel \ref{table:sebuahcontoh1} ukuran kecil.
+ini merupakan contoh tabel \ref{table:sebuahcontoh1}.
 \begin{table}[h]
-\caption{Small Table}
+\caption{Tabel Contoh}
 \centering
 \begin{tabular}{ccc}
 \hline
@@ -187,6 +187,36 @@ C&D&E\\
 \hline
 \end{tabular}
 \label{table:sebuahcontoh1}
+\end{table}
+
+Jika kita perhatikan pada tag tabular ada ccc yang artinya ada tiga kolom dengan format char sehingga hasilnya rata tengah, kita bisa mengubahnya menjadi rata kanan kiri dengan mengubahnya menjadi format parapgraph dengan menggantinya menjadi p\{lebar kolom\}. sehingga kodenya :
+\begin{verbatim}
+\begin{table}[ht]
+\caption{Tabel Contoh 2}
+\centering
+\begin{tabular}{p{1.25in}p{1.25in}p{1.25in}}
+\hline
+Karakter&Contoh&Kondisi\\
+\hline
+Sebuah keadaan yang dimana sedang terjadi apa apa yang sedang diperbincangkan.&Selain keren juga harus terlihar rapih dan penuh pesona&Kondisi ini bisa kita bilang, kondisi yang ideal.\\
+\hline
+\end{tabular}
+\label{table:contoh}
+\end{table}
+\end{verbatim}
+Hasilnya menjadi Tabel \ref{table:contohtabel2}. Apabila tabel berada di jurnal format dua kolom dan kita ingin tabel tersebut bergabung antara dua kolom menjadi satu kolomg, cukup menambahkan tanda * pada tag begin dan end table menjadi \verb|\begin{table*}| dan \verb|\end{table*}|.
+
+\begin{table}[ht]
+\caption{Tabel Contoh 2}
+\centering
+\begin{tabular}{p{1.25in}p{1.25in}p{1.25in}}
+\hline
+Karakter&Contoh&Kondisi\\
+\hline
+Sebuah keadaan yang dimana sedang terjadi apa apa yang sedang diperbincangkan.&Selain keren juga harus terlihar rapih dan penuh pesona&Kondisi ini bisa kita bilang, kondisi yang ideal.\\
+\hline
+\end{tabular}
+\label{table:contohtabel2}
 \end{table}
 
 
