@@ -57,7 +57,14 @@ Maka penulisan kalimat di jurnal : \\
 Dalam sebuah artikel dari Ganapathi yang 
 menyebutkan bahwa komputasi adalah keniscayan \verb|\cite{ganapathi2006windows}|.
 
+Jika kita mengalami error pada bibtex seperti ini:
+\begin{verbatim}
+ found no \bibdata command---while reading file main.aux
+\end{verbatim}
+Setelah kita cek dahulu apakah ada \verb|\bibliography{references}| pada file main.tex.
 
+	
+	
 \section{Memasukkan Gambar}
 
 Pastikan gambar sudah diberi label seperti skrip di bawah ini dengan tag label \verb|\label{labelgambar}| . Gambar disebutkan di dalam artikel dengan format sesuai labelnya yaitu \verb|\ref{labelgambar}|. Gambar diselipkan dengan menambahkan blok sintaks :
@@ -164,7 +171,24 @@ C&D&E\\
 \end{tabular}
 \label{table:contoh}
 \end{table}
-    \end{verbatim}
+\end{verbatim}
+
+Maka hasilnya menjadi :
+
+ini merupakan contoh tabel \ref{table:sebuahcontoh1} ukuran kecil.
+\begin{table}[h]
+\caption{Small Table}
+\centering
+\begin{tabular}{ccc}
+\hline
+one&two&three\\
+\hline
+C&D&E\\
+\hline
+\end{tabular}
+\label{table:sebuahcontoh1}
+\end{table}
+
 
 \section{Penggunaan Rumus}
 
